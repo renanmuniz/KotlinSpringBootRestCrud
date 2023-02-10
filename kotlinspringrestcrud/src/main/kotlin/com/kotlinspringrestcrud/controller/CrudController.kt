@@ -23,7 +23,7 @@ class CrudController(
         return ResponseEntity("Test ok!", HttpStatus.OK)
     }
 
-    @GetMapping("novo")
+    @PostMapping("novo")
     fun criar(@RequestBody topico: TopicoDTO): ResponseEntity<String> {
         logger.info { "Inserindo um novo tópico" }
         try {
